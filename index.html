@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Claire's Art</title>
+    <link rel="stylesheet" href="./pages/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="image-container">
+      <img id="main-img" src="" />
+      <div id="password-form">
+        <div id="container">
+          <div id="text"></div>
+          <div id="cursor"></div>
+        </div>
+        <div id="container">
+          <form>
+            <input type="text" id="password-input" />
+            <input
+              type="submit"
+              value="Submit"
+              class="hidden"
+              onclick="checkPassword(event)"
+            />
+          </form>
+        </div>
+      </div>
+      <div id="secret-image" class="hidden">
+        <img id="erase-img" src="" />
+      </div>
+    </div>
+    <script src="./pages/index.js"></script>
+  </body>
+</html>
