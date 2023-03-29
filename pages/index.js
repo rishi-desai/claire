@@ -32,19 +32,12 @@ var eraseImages = [
 ];
 
 // Function to set random image path for given element ID
-function setRandomImage(index = -1) {
-  if (index == -1) {
-    var imgIndex = Math.floor(Math.random() * mainImages.length);
-    var mainImage = mainImages[imgIndex];
-    var eraseImage = eraseImages[imgIndex];
-    document.getElementById("main-img").src = mainImage;
-    document.getElementById("erase-img").src = eraseImage;
-  } else {
-    var mainImage = mainImages[index];
-    var eraseImage = eraseImages[index];
-    document.getElementById("main-img").src = mainImage;
-    document.getElementById("erase-img").src = eraseImage;
-  }
+function setRandomImage() {
+  imgIndex = Math.floor(Math.random() * mainImages.length);
+  var mainImage = mainImages[imgIndex];
+  var eraseImage = eraseImages[imgIndex];
+  document.getElementById("main-img").src = mainImage;
+  document.getElementById("erase-img").src = eraseImage;
 }
 
 // Set random images on page load
