@@ -57,6 +57,7 @@ function checkPassword(event) {
     document.getElementById("password-form").classList.add("hidden");
     document.getElementById("secret-image").classList.add("show");
     document.getElementById("secret-image").classList.remove("hidden");
+    document.getElementById("main-img").classList.add("hidden");
   } else {
     alert("Incorrect password. Please try again.");
   }
