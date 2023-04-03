@@ -7,7 +7,7 @@ var mainImages = [
   "./public/erase/decentercb_6.jpg",
   "./public/erase/decentercb_8.jpg",
   "./public/erase/decentercb_10.jpg",
-  "./public/erase/decentercb_12.jpg",
+  "./public/erase/decentercb_12.JPG",
   "./public/erase/decentercb_14.jpg",
   "./public/erase/decentercb_15.jpg",
   "./public/erase/decentercb_17.jpg",
@@ -33,7 +33,15 @@ var eraseImages = [
 
 // Function to set random image path for given element ID
 function setRandomImage() {
-  imgIndex = Math.floor(Math.random() * mainImages.length);
+  let imgIndex;
+  const prevImgIndex = parseInt(sessionStorage.getItem("prevImgIndex"));
+
+  do {
+    imgIndex = Math.floor(Math.random() * mainImages.length);
+  } while (imgIndex === prevImgIndex);
+
+  sessionStorage.setItem("prevImgIndex", imgIndex);
+
   var mainImage = mainImages[imgIndex];
   var eraseImage = eraseImages[imgIndex];
   document.getElementById("main-img").src = mainImage;
@@ -44,11 +52,12 @@ function setRandomImage() {
 setRandomImage();
 
 function checkPassword(event) {
-  event.preventDefault();
   const password = document.getElementById("password-input").value;
   if (password.toLowerCase().trim() == "decenter") {
     document.getElementById("password-form").classList.add("hidden");
     document.getElementById("secret-image").classList.add("show");
+    document.getElementById("secret-image").classList.remove("hidden");
+    document.getElementById("main-img").classList.add("hidden");
   } else {
     alert("Incorrect password. Please try again.");
   }
@@ -56,7 +65,6 @@ function checkPassword(event) {
 
 function submitForm(event) {
   event.preventDefault(); // This will prevent the default form submission behavior
-
   checkPassword(event);
 }
 
