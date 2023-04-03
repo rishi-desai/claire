@@ -7,7 +7,7 @@ var mainImages = [
   "./public/erase/decentercb_6.jpg",
   "./public/erase/decentercb_8.jpg",
   "./public/erase/decentercb_10.jpg",
-  "./public/erase/decentercb_12.jpg",
+  "./public/erase/decentercb_12.JPG",
   "./public/erase/decentercb_14.jpg",
   "./public/erase/decentercb_15.jpg",
   "./public/erase/decentercb_17.jpg",
