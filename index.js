@@ -33,7 +33,15 @@ var eraseImages = [
 
 // Function to set random image path for given element ID
 function setRandomImage() {
-  imgIndex = Math.floor(Math.random() * mainImages.length);
+  let imgIndex;
+  const prevImgIndex = parseInt(sessionStorage.getItem("prevImgIndex"));
+
+  do {
+    imgIndex = Math.floor(Math.random() * mainImages.length);
+  } while (imgIndex === prevImgIndex);
+
+  sessionStorage.setItem("prevImgIndex", imgIndex);
+
   var mainImage = mainImages[imgIndex];
   var eraseImage = eraseImages[imgIndex];
   document.getElementById("main-img").src = mainImage;
