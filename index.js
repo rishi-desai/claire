@@ -44,11 +44,11 @@ function setRandomImage() {
 setRandomImage();
 
 function checkPassword(event) {
-  event.preventDefault();
   const password = document.getElementById("password-input").value;
   if (password.toLowerCase().trim() == "decenter") {
     document.getElementById("password-form").classList.add("hidden");
     document.getElementById("secret-image").classList.add("show");
+    document.getElementById("secret-image").classList.remove("hidden");
   } else {
     alert("Incorrect password. Please try again.");
   }
@@ -56,7 +56,6 @@ function checkPassword(event) {
 
 function submitForm(event) {
   event.preventDefault(); // This will prevent the default form submission behavior
-
   checkPassword(event);
 }
 
