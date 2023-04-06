@@ -69,7 +69,7 @@ function submitForm(event) {
 }
 
 // List of sentences
-var _CONTENT = ["PUT HEADPHONES ON", "ENTER 'decenter' BELOW"];
+var _CONTENT = ["ENTER 'decenter' BELOW"];
 
 // Current sentence being processed
 var _PART = 0;
