@@ -123,3 +123,20 @@ input[type="text"] {
 
 font-family: "VT323", monospace;
   
+.arrow-button {
+  position: fixed;
+  bottom: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  color: black;
+}
+
+#left-arrow {
+  left: 20px;
+}
+
+#right-arrow {
+  right: 20px;
+}
