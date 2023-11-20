@@ -76,6 +76,9 @@ function showNextImage() {
   document.getElementById("main-img").classList.remove("hidden");
 
   changeImage(imgIndex);
+
+  const nextImgIndex = (imgIndex + 1) % mainImages.length;
+  preloadImage(mainImages[nextImgIndex]);
 }
 
 function changeImage(imgIndex) {
@@ -104,6 +107,11 @@ document.addEventListener("keydown", function (event) {
 });
 
 changeImage(0);
+
+function preloadImage(url) {
+  const img = new Image();
+  img.src = url;
+}
 
 document.getElementById("next-button").addEventListener("click", function () {
   showNextImage();
