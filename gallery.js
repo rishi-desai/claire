@@ -76,6 +76,8 @@ function showNextImage() {
   document.getElementById("main-img").classList.remove("hidden");
 
   changeImage(imgIndex);
+
+  document.getElementById("next-button-container").style.display = "none";
 }
 
 function changeImage(imgIndex) {
@@ -104,3 +106,7 @@ document.addEventListener("keydown", function (event) {
 });
 
 changeImage(0);
+
+document.getElementById("next-button").addEventListener("click", function () {
+  showNextImage();
+});

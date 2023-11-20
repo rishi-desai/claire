@@ -6,6 +6,7 @@ function checkPassword(event) {
     document.getElementById("secret-image").classList.remove("hidden");
     document.getElementById("main-img").classList.add("hidden");
     document.getElementById("password-input").value = "";
+    document.getElementById("next-button-container").style.display = "block";
   } else {
     alert("Incorrect password. Please try again.");
   }

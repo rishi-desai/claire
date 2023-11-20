@@ -123,20 +123,28 @@ input[type="text"] {
 
 font-family: "VT323", monospace;
   
-.arrow-button {
+#next-button-container {
   position: fixed;
   bottom: 20px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 2;
-  color: black;
-}
-
-#left-arrow {
-  left: 20px;
-}
-
-#right-arrow {
   right: 20px;
+  z-index: 1000; /* Ensures it stays above other elements */
 }
+
+#next-button {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  line-height: 1;
+  padding-bottom: 5px;
+  background-color: #cc0000;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer; /* Changes the cursor on hover */
+  width: 65px; /* Adjust as needed */
+  height: 65px; /* Adjust as needed */
+  font-size: 50px;
+  font-weight: bolder;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
