@@ -76,8 +76,6 @@ function showNextImage() {
   document.getElementById("main-img").classList.remove("hidden");
 
   changeImage(imgIndex);
-
-  document.getElementById("next-button-container").style.display = "none";
 }
 
 function changeImage(imgIndex) {
@@ -109,4 +107,5 @@ changeImage(0);
 
 document.getElementById("next-button").addEventListener("click", function () {
   showNextImage();
+  document.getElementById("next-button").style.display = "none";
 });

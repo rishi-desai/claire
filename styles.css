@@ -131,7 +131,7 @@ font-family: "VT323", monospace;
 }
 
 #next-button {
-  display: flex;
+  display: none;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   line-height: 1;
